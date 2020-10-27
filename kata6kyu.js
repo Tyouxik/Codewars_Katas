@@ -1,3 +1,13 @@
+//Break camelCase
+function solution(string) {
+  let spacedStr = "";
+  for (i = 0; i < string.length; i++) {
+    spacedStr +=
+      string[i] === string.toLowerCase()[i] ? string[i] : ` ${string[i]}`;
+  }
+  return spacedStr;
+}
+
 //Equal Sides Of An Array
 function findEvenIndex(arr) {
   for (i = 0; i < arr.length; i++) {
