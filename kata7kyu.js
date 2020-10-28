@@ -1,3 +1,14 @@
+//String matchup
+function solve(a, b) {
+  return b.map((word) => {
+    let wordCounter = 0;
+    for (let el of a) {
+      if (word === el) wordCounter++;
+    }
+    return wordCounter;
+  });
+}
+
 //Filter Coffee
 function search(budget, prices) {
   return prices
