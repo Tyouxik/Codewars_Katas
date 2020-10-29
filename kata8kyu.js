@@ -3,9 +3,9 @@
 function litres(time) {
   return Math.floor(time / 2);
 }
-//Typescript
-// export function litres(time: number): number {
-//     return Math.floor(time / 2);}
+/* Typescript
+export function litres(time: number): number {
+    return Math.floor(time / 2);} */
 
 //String repeat
 function repeatStr(n, s) {

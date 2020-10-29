@@ -33,14 +33,14 @@ function accum(s) {
     .join("-");
 }
 
-// function accum(string) {
-//   const upperString = [...string.toUpperCase()];
-//   let mumbling = "";
-//   for (let i = 0; i < upperString.length; i++) {
-//     mumbling += upperString[i] + upperString[i].toLowerCase().repeat(i) + "-";
-//   }
-//   return mumbling.substring(0, mumbling.length - 1);
-// }
+/* function accum(string) {
+  const upperString = [...string.toUpperCase()];
+  let mumbling = "";
+  for (let i = 0; i < upperString.length; i++) {
+    mumbling += upperString[i] + upperString[i].toLowerCase().repeat(i) + "-";
+  }
+  return mumbling.substring(0, mumbling.length - 1);
+} */
 
 //Vowel Count
 //Refactored version
@@ -48,12 +48,12 @@ function getCount(str) {
   return str.split("").filter((letter) => "aeiou".includes(letter)).length;
 }
 
-// function getCount(str) {
-//   return str.split("").filter((letter) => {
-//     let vowel = "aeiou";
-//     return vowel.includes(letter);
-//   }).length;
-// }
+/* function getCount(str) {
+  return str.split("").filter((letter) => {
+    let vowel = "aeiou";
+    return vowel.includes(letter);
+  }).length;
+} */
 
 //The Office I - Outed
 //Refactored version
@@ -69,25 +69,25 @@ function outed(meet, boss) {
   return totalScore / numOfPerson <= 5 ? "Get Out Now!" : "Nice Work Champ!";
 }
 
-// function outed(meet, boss) {
-//   let happyTotal = 0;
-//   let colleagueNum = 0;
-//   for (let colleague in meet) {
-//     if (colleague === boss) {
-//       happyTotal += meet[colleague] * 2;
-//       colleagueNum += 1;
-//     } else {
-//       happyTotal += meet[colleague];
-//       colleagueNum += 1;
-//     }
-//   }
+/* function outed(meet, boss) {
+  let happyTotal = 0;
+  let colleagueNum = 0;
+  for (let colleague in meet) {
+    if (colleague === boss) {
+      happyTotal += meet[colleague] * 2;
+      colleagueNum += 1;
+    } else {
+      happyTotal += meet[colleague];
+      colleagueNum += 1;
+    }
+  }
 
-//   if (happyTotal / colleagueNum <= 5) {
-//     return "Get Out Now!";
-//   } else {
-//     return "Nice Work Champ!";
-//   }
-// }
+  if (happyTotal / colleagueNum <= 5) {
+    return "Get Out Now!";
+  } else {
+    return "Nice Work Champ!";
+  }
+} */
 
 //Turkish Numbers, 0-99
 const units = {

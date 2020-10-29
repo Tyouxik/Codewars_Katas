@@ -50,22 +50,22 @@ function rgb(r, g, b) {
 moveZeros = (arr) =>
   arr.filter((el) => el !== 0).concat(arr.filter((el) => el === 0));
 
-// const moveZeros = function (arr) {
-//   let zeroCount = 0;
-//   let nonZero = arr.filter((el) => {
-//     if (el === 0) {
-//       zeroCount++;
-//     } else {
-//       return true;
-//     }
-//   });
-//   for (let i = 0; i < zeroCount; i++) {
-//     nonZero.push(0);
-//   }
-//   return nonZero;
-// };
+/* const moveZeros = function (arr) {
+  let zeroCount = 0;
+  let nonZero = arr.filter((el) => {
+    if (el === 0) {
+      zeroCount++;
+    } else {
+      return true;
+    }
+  });
+  for (let i = 0; i < zeroCount; i++) {
+    nonZero.push(0);
+  }
+  return nonZero;
+}; */
 
-//Human Readable Time
+// Human Readable Time
 function humanReadable(timeSeconds) {
   let seconds = timeSeconds % 60;
   seconds = seconds > 10 ? `${timeSeconds % 60}` : `0${timeSeconds % 60}`;
