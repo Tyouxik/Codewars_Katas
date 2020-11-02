@@ -161,7 +161,19 @@ let orderedCount = function (text) {
 };
 
 //Find all pairs
+//Refactored version using filter
 function duplicates(array) {
+  let noDuplicate = [...new Set(array)];
+  if (array.length <= 1) return 0;
+  let pairCounter = 0;
+  noDuplicate.forEach((number) => {
+    const occurences = array.filter((el) => el === number).length;
+    pairCounter += Math.floor(occurences / 2);
+  });
+  return pairCounter;
+}
+
+/* function duplicates(array) {
   let sortedArray = array.sort();
   let pairCounter = 0;
   for (let i = 0; i < array.length - 1; i++) {
@@ -171,7 +183,7 @@ function duplicates(array) {
     }
   }
   return pairCounter;
-}
+} */
 
 //Simple Fun #144: Distinct Digit Year
 const numberIsDistinct = (num) => {

@@ -45,23 +45,23 @@ function solve(arr) {
     return nums[b] !== nums[a] ? nums[b] - nums[a] : a - b;
   });
 }
-// function solve(arr) {
-//   let nums = {};
-//   for (let i = 0; i < arr.length; i++) {
-//     if (!nums[arr[i]]) {
-//       nums[arr[i]] = 1;
-//     } else {
-//       nums[arr[i]]++;
-//     }
-//   }
-//   return arr.sort((a, b) => {
-//     if (nums[b] !== nums[a]) {
-//       return nums[b] - nums[a];
-//     } else if (nums[b] === nums[a]) {
-//       return a - b;
-//     }
-//   });
-// }
+/* function solve(arr) {
+  let nums = {};
+  for (let i = 0; i < arr.length; i++) {
+    if (!nums[arr[i]]) {
+      nums[arr[i]] = 1;
+    } else {
+      nums[arr[i]]++;
+    }
+  }
+  return arr.sort((a, b) => {
+    if (nums[b] !== nums[a]) {
+      return nums[b] - nums[a];
+    } else if (nums[b] === nums[a]) {
+      return a - b;
+    }
+  });
+} */
 
 //Replace With Alphabet Position
 function alphabetPosition(text) {
