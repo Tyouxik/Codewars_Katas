@@ -1,3 +1,8 @@
+//Odd or Even?
+function oddOrEven(array) {
+  return array.reduce((acc, val) => (acc += val), 0) % 2 === 0 ? "even" : "odd";
+}
+
 //String matchup
 function solve(a, b) {
   return b.map((word) => {
