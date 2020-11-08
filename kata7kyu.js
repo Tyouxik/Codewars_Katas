@@ -1,3 +1,16 @@
+//Alphabet symmetry
+function solve(arr) {
+  return arr.map((word) => {
+    let counter = 0;
+    word.split("").forEach((letter, idx) => {
+      if (letter.toLowerCase().charCodeAt() - 96 === idx + 1) {
+        counter++;
+      }
+    });
+    return counter;
+  });
+}
+
 //Odd or Even?
 function oddOrEven(array) {
   return array.reduce((acc, val) => (acc += val), 0) % 2 === 0 ? "even" : "odd";
