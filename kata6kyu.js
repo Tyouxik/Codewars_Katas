@@ -1,3 +1,22 @@
+//Decipher this!
+function decipherThis(str) {
+  return str
+    .split(" ")
+    .map((word) => {
+      let first = word.match(/(\d+)/g);
+      word = word.replace(first, String.fromCharCode(first));
+      if (word.length > 2) {
+        word = word.split("");
+        let temp = word[1];
+        word[1] = word[word.length - 1];
+        word[word.length - 1] = temp;
+        word = word.join("");
+      }
+      return word;
+    })
+    .join(" ");
+}
+
 //Break camelCase
 function solution(string) {
   let spacedStr = "";
