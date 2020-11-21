@@ -1,3 +1,14 @@
+//Wave Sorting
+function waveSort(arr) {
+  arr = arr.sort((a, b) => a - b);
+  for (let i = 0; i < arr.length - 1; i++) {
+    let temp = arr[i];
+    arr[i] = arr[i + 1];
+    arr[i + 1] = temp;
+    i++;
+  }
+}
+
 //Decipher this!
 function decipherThis(str) {
   return str
