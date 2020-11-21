@@ -1,3 +1,24 @@
+//Life Path Number
+function reduceUnder10(str) {
+  if (str.length === 1) {
+    return str;
+  }
+
+  let reduction = str.split("").reduce((acc, val) => {
+    return (acc += parseInt(val));
+  }, 0);
+  reduction += "";
+  return reduceUnder10(reduction);
+}
+
+function lifePathNumber(dateOfBirth) {
+  let lifeNumParts = dateOfBirth.split("-").map((segment) => {
+    return reduceUnder10(segment);
+  });
+  let lifeNum = reduceUnder10(lifeNumParts.join(""));
+  return parseInt(lifeNum[0]);
+}
+
 //Alphabet symmetry
 function solve(arr) {
   return arr.map((word) => {
