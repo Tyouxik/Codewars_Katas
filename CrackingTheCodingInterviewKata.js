@@ -1,3 +1,23 @@
+//Implement an algorithm to find the kth to last element of a singly linked list
+//Useful resources: https://www.geeksforgeeks.org/data-structures/linked-list/singly-linked-list/
+//If K is bigger than the number of nodes, function returns null
+function kThToLast(list, k) {
+  let dataPointer = list;
+  let kPointer = list;
+
+  for (let i = 0; i < k + 1; i++) {
+    if (!kPointer) return null;
+    kPointer = kPointer.next;
+  }
+
+  while (kPointer) {
+    dataPointer = dataPointer.next;
+    kPointer = kPointer.next;
+  }
+
+  return dataPointer.data;
+}
+
 //String compression ( from Craking the coding Interview)
 //CompressString is a function that perform basic compression using the counts of repeated characters.
 //It takes a string as argument and returns a string.
